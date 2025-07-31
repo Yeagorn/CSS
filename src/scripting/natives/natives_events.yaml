@@ -1,0 +1,23 @@
+HOOK_EVENT: name:string, callback:func, isPost:bool -> void
+UNHOOK_EVENT: name:string, callback:func, isPost:bool -> void
+CREATE_EVENT: name:string, force:bool -> pointer
+FREE_EVENT: gameEvent:pointer -> void
+FIRE_EVENT: gameEvent:pointer, dontBroadcast:bool -> void
+FIRE_EVENT_TO_CLIENT: gameEvent:pointer, clientIndex:int -> void
+GET_EVENT_NAME: gameEvent:pointer -> string
+GET_EVENT_BOOL: gameEvent:pointer, name:string -> bool
+GET_EVENT_INT: gameEvent:pointer, name:string -> int
+GET_EVENT_FLOAT: gameEvent:pointer, name:string -> float
+GET_EVENT_STRING: gameEvent:pointer, name:string -> string
+SET_EVENT_BOOL: gameEvent:pointer, name:string, value:bool -> void
+SET_EVENT_FLOAT: gameEvent:pointer, name:string, value:float -> void
+SET_EVENT_STRING: gameEvent:pointer, name:string, value:string -> void
+SET_EVENT_INT: gameEvent:pointer, name:string, value:int -> void
+LOAD_EVENTS_FROM_FILE: path:string, searchAll:bool -> int
+GET_EVENT_PLAYER_CONTROLLER: gameEvent:pointer, name:string -> pointer
+SET_EVENT_PLAYER_CONTROLLER: gameEvent:pointer, name:string, value:pointer -> void
+SET_EVENT_ENTITY: gameEvent:pointer, name:string, value:pointer -> void
+SET_EVENT_ENTITY_INDEX: gameEvent:pointer, name:string, value:int -> void
+GET_EVENT_PLAYER_PAWN: gameEvent:pointer, name:string -> pointer
+GET_EVENT_UINT64: gameEvent:pointer, name:string -> uint64
+SET_EVENT_UINT64: gameEvent:pointer, name:string, value:uint64 -> void

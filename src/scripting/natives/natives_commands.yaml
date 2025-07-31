@@ -1,0 +1,16 @@
+ADD_COMMAND: name:string,description:string,serverOnly:bool,flags:int,callback:callback -> void
+REMOVE_COMMAND: name:string,callback:callback -> void
+ADD_COMMAND_LISTENER: cmd:string, callback:callback, post:bool -> void
+REMOVE_COMMAND_LISTENER: cmd:string, callback:callback, post:bool -> void
+COMMAND_GET_ARG_COUNT: command:pointer -> int
+COMMAND_GET_ARG_STRING: command:pointer -> string
+COMMAND_GET_COMMAND_STRING: command:pointer -> string
+COMMAND_GET_ARG_BY_INDEX: command:pointer,index:int -> string
+COMMAND_GET_CALLING_CONTEXT: command:pointer -> CommandCallingContext
+ISSUE_CLIENT_COMMAND: slot:int,command:string -> void
+ISSUE_CLIENT_COMMAND_FROM_SERVER: slot:int,command:string -> void
+FIND_CONVAR: name:string -> pointer
+SET_CONVAR_STRING_VALUE: convar:pointer,value:string -> void
+GET_CLIENT_CONVAR_VALUE: clientIndex:int,convarName:string -> string
+SET_FAKE_CLIENT_CONVAR_VALUE: clientIndex:int,convarName:string,convarValue:string -> void
+REPLICATE_CONVAR: clientSlot:int,convarName:string,convarValue:string -> void

@@ -1,0 +1,17 @@
+GET_ENTITY_FROM_INDEX: index:int -> pointer
+GET_USERID_FROM_INDEX: index:int -> int
+GET_DESIGNER_NAME: pointer:pointer -> string
+GET_ENTITY_POINTER_FROM_HANDLE: entityHandlePointer:pointer -> pointer
+GET_REF_FROM_ENTITY_POINTER: entityPointer:pointer -> uint
+GET_ENTITY_POINTER_FROM_REF: entityRef:uint -> pointer
+GET_CONCRETE_ENTITY_LIST_POINTER: -> pointer
+IS_REF_VALID_ENTITY: entityRef:uint -> bool
+PRINT_TO_CONSOLE: index:int, message:string -> void
+GET_FIRST_ACTIVE_ENTITY: -> pointer
+GET_PLAYER_AUTHORIZED_STEAMID: slot:int -> uint64
+GET_PLAYER_IP_ADDRESS: slot:int -> string
+HOOK_ENTITY_OUTPUT: classname:string, outputName:string, callback:func, mode:HookMode -> void
+UNHOOK_ENTITY_OUTPUT: classname:string, outputName:string, callback:func, mode:HookMode -> void
+ACCEPT_INPUT: pThis:pointer, inputName:string, activator:pointer, caller:pointer, value:string, outputID:int -> void
+ADD_ENTITY_IO_EVENT: pTarget:pointer, inputName:string, activator:pointer, caller:pointer, value:string, delay:float, outputID:int -> void
+EMIT_SOUND_FILTER: filtermask:uint64, ent:uint, sound:string, volume:float, pitch:float -> uint
